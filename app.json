@@ -1,0 +1,7 @@
+{
+    "DBUsername": "root",
+    "DBPassword": "",
+    "DBHostXampp": "unix(/Applications/XAMPP/xamppfiles/var/mysql/mysql.sock)",
+    "DBName": "cari_islam",
+    "IsXampp": true
+}

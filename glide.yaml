@@ -1,0 +1,17 @@
+package: cari-islam
+import:
+- package: github.com/mikemintang/go-curl
+  version: ^0.1.0
+- package: github.com/PuerkitoBio/goquery
+  version: ^1.5.0
+- package: github.com/andybalholm/cascadia
+  version: ^1.0.0
+- package: github.com/jinzhu/gorm
+  version: ^1.9.5
+- package: github.com/tkanos/gonfig
+  version: ^1.0.0
+- package: github.com/go-sql-driver/mysql
+  version: ^1.4.1
+- package: golang.org/x/net
+  subpackages:
+  - html
