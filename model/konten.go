@@ -5,6 +5,7 @@ import "time"
 //Konten - model
 type Konten struct {
 	ID          int        `gorm:"primary_key" json:"id"`
+	Sumber      string     `json:"sumber" gorm:"size:50"`
 	Title       string     `json:"title" gorm:"size:200"`
 	URL         string     `json:"url" gorm:"size:80000"`
 	ShortDesc   string     `json:"short_desc" gorm:"size:80000"`

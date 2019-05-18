@@ -70,7 +70,7 @@ func initKonten() {
 				tanggal := s.Find(".td-post-date").Text()
 				shortDesc := strings.TrimSpace(s.Find(".td-excerpt").Text())
 
-				repo.SaveToKonten(title, link, tanggal, shortDesc, kat.ID)
+				repo.SaveToKonten("rumaysho.com", title, link, tanggal, shortDesc, kat.ID)
 			})
 		}
 	}
@@ -107,7 +107,7 @@ func updateKonten() {
 				shortDesc := strings.TrimSpace(s.Find(".td-excerpt").Text())
 
 				if link != lastKonten.URL {
-					repo.SaveToKonten(title, link, tanggal, shortDesc, kat.ID)
+					repo.SaveToKonten("rumaysho.com", title, link, tanggal, shortDesc, kat.ID)
 				}
 			})
 		}

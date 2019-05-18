@@ -19,10 +19,11 @@ func InitRepo(dbconn *gorm.DB) *repo {
 	}
 }
 
-func (r *repo) SaveToKonten(title, url, tanggal, shortDesc string, kategoriID int) {
+func (r *repo) SaveToKonten(sumber, title, url, tanggal, shortDesc string, kategoriID int) {
 	defer util.Recover()
 
 	konten := &model.Konten{
+		Sumber:     sumber,
 		Title:      title,
 		URL:        url,
 		Tanggal:    tanggal,

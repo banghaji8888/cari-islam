@@ -4,6 +4,7 @@ import (
 	"cari-islam/config"
 	"cari-islam/crawler/rumaysho"
 	"cari-islam/db"
+	"cari-islam/elasticsearch"
 	"cari-islam/util"
 	"os"
 )
@@ -11,12 +12,16 @@ import (
 func main() {
 	defer util.Recover()
 
-	// METHOD=initKonten go run main.go
+	// METHOD=elasticsearch go run main.go
 
 	config.Init()
 	db.Init()
 
 	method := os.Getenv("METHOD")
 
-	rumaysho.Init(method)
+	if method == "elasticsearch" {
+		elasticsearch.InsertToElasticSearch()
+	} else {
+		rumaysho.Init(method)
+	}
 }
