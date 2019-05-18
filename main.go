@@ -11,6 +11,8 @@ import (
 func main() {
 	defer util.Recover()
 
+	// METHOD=initKonten go run main.go
+
 	config.Init()
 	db.Init()
 
